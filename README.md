@@ -2,7 +2,7 @@
 
 Super simple site generator using [ssg5](https://github.com/nalmeida/ssg5) submodule and deploying it on Netlify at: https://ssg5-test.netlify.app
 
-
+See this project live: https://github.com/nalmeida/ssg5-test
 
 ## Install
 
@@ -18,17 +18,15 @@ $ ./watch
 
 ## Deploy to Netlify
 
-Of course you need to have a Netlify account, connect it to your git repository and so on. 
+Of course you need to have a Netlify account, connect it to your git repository and so on.
 
-Inside the **Continuous Deployment** of your project, config:
+### 1. Inside the **Continuous Deployment** of your project, config:
 
 **Build command**: `./generate https://YOUR_FULL_URL.app`
 
 **Deploy directory**: `dist`
 
-
-
-Another required configuration is: 
+### 2. Another required configuration is:
 
 Inside **Build image selection** of your project and select:
 
