@@ -1,0 +1,3 @@
+[submodule "ssg5"]
+	path = ssg5
+	url = https://github.com/nalmeida/ssg5
