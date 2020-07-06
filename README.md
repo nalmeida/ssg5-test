@@ -1,6 +1,6 @@
 # ssg5 Sample Site
 
-Super simple site generator using [ssg5](https://github.com/nalmeida/ssg5) submodule and deploying it on Netlify at: https://ssg5-test.netlify.app
+Super simple site generator using [ssg5](https://github.com/nalmeida/ssg5) submodule and deploying it on Netlify.
 
 ⭐️ See this project live: https://ssg5-test.netlify.app/
 
