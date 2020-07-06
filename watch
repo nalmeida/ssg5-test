@@ -1,0 +1,15 @@
+#!/bin/bash
+
+watch() {
+	echo Watching folder $1/ every $2 secs.
+	while [[ true ]]
+	do
+		files=`find $1 -type f -mtime -$2s`
+		if [[ $files != "" ]] ; then
+			echo File changed, $files
+		fi
+		sleep $2
+	done
+}
+
+watch ./src 1
