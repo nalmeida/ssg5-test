@@ -10,7 +10,7 @@ Super simple site generator using [ssg5](https://github.com/nalmeida/ssg5) submo
 
 ## Local development
 
-Run the `watch`command to generate the files from `./src` to `./dist/` folder and start watching the `./src/*`folder.
+Run the `watch` command to generate the files from `./src` to `./dist` folder and start watching the `./src/*` folder.
 
 ```
 $ ./watch
@@ -18,7 +18,7 @@ $ ./watch
 
 ## Deploy to Netlify
 
-Of course you need to have a Netlify account, connect it to your git repository and so on.
+Of course you must have a Netlify account, connect it to your git repository and so on.
 
 ### 1. Inside the **Continuous Deployment** of your project, config:
 
