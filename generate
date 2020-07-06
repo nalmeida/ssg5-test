@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rm dist/.files; ./ssg5 src/ dist/ " - Testing SSG5" ./
