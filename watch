@@ -1,15 +1,16 @@
 #!/bin/bash
 
 watch() {
-	echo Watching folder $1/ every $2 secs.
+	chsum1=""
+
 	while [[ true ]]
 	do
-		files=`find $1 -type f -mtime -$2s`
-		if [[ $files != "" ]] ; then
-			echo File changed, $files
-		fi
-		sleep $2
+			chsum2=`find src/ -type f -exec md5 {} \;`
+			if [[ $chsum1 != $chsum2 ]] ; then
+					chsum1=$chsum2
+					./generate /
+			fi
+			sleep .2
 	done
 }
-
-watch ./src 1
+watch

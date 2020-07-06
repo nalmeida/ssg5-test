@@ -1,3 +1,5 @@
 #!/bin/bash
 
-rm dist/.files; ./ssg5/ssg5 src/ dist/ " - Testing SSG5" https://ssg5-teste.netlify.app
+echo "Generating site"
+rm dist/.files; ./ssg5/ssg5 src/ dist/ " - Testing SSG5" $1
+echo "---"
