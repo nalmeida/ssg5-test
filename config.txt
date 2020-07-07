@@ -1,0 +1,3 @@
+SRC=./src
+DST=./dist
+SITE_NAME="SSG5 Test Website"

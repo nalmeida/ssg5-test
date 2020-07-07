@@ -1,5 +1,17 @@
 #!/bin/bash
 
+source config.txt
+
+if [ -d $DST ]; then
+	file="$DST/.files"
+	if [ -f $file ] ; then
+		rm $file
+	fi
+else
+	mkdir $DST
+	touch $DST/.gitkeep
+fi
+
 echo "Generating site"
-rm dist/.files; ./ssg5/ssg5 src/ dist/ " - Testing SSG5" $1
+./ssg5/ssg5 $SRC $DST "$SITE_NAME" $1
 echo "---"
