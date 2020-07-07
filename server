@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Original source: https://stackoverflow.com/a/9461685
+
+source config.txt
+
+echo -e "\nInstant server ----------------------- ";
+echo -e "Serving from: $DST";
+echo -e "http://0.0.0.0:8000/";
+echo -e "Press Ctrl+C to stop the server";
+echo -e "-------------------------------------- ";
+
+(sleep 1 && open "http://0.0.0.0:8000/") &
+pushd $DST; python -m http.server;
