@@ -2,12 +2,13 @@
 
 # Original source: https://stackoverflow.com/a/9461685
 
+source config.txt
 watch() {
 	chsum1=""
 
 	while [[ true ]]
 	do
-			chsum2=`find src/ -type f -exec md5 {} \;`
+			chsum2=`find $SRC -type f -exec md5 {} \;`
 			if [[ $chsum1 != $chsum2 ]] ; then
 					chsum1=$chsum2
 					./generate /
@@ -15,4 +16,8 @@ watch() {
 			sleep .2
 	done
 }
+echo -e "-------"
+echo -e "Watching folder: $SRC/*"
+echo -e "Press Ctrl+C to stop watching"
+echo -e "-------"
 watch
