@@ -12,6 +12,8 @@ else
 	touch $DST/.gitkeep
 fi
 
+BASE_URL=${1:-\/}
+
 echo "Generating site"
-./ssg5/ssg5 $SRC $DST "$SITE_NAME" $1
+./ssg5/ssg5 $SRC $DST "$SITE_NAME" "$BASE_URL"
 echo "---"
