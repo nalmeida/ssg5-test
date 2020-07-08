@@ -57,15 +57,14 @@ Of course you must have a Netlify account, connect it to your git repository and
 
 ### 1. Inside the **Continuous Deployment** of your project, config:
 
-**Build command**: `./generate https://YOUR_FULL_URL.app`
-
-**Deploy directory**: `dist`
+* **Build command**: `./generate https://YOUR_FULL_URL.app`
+* **Deploy directory**: `dist`
 
 ### 2. Another required configuration is:
 
 Inside **Build image selection** of your project and select:
 
-**Build image**: `Ubuntu Trusty 14.04`
+* **Build image**: `Ubuntu Trusty 14.04`
 
 ---
 
