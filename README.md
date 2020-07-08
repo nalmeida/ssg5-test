@@ -4,16 +4,51 @@ Super simple site generator using [ssg5](https://github.com/nalmeida/ssg5) submo
 
 ⭐️ See this project live: https://ssg5-test.netlify.app/
 
+## Tested on
+
+* MacOS `10.13.6`
+* GNU bash, version `3.2.57(1)-release (x86_64-apple-darwin17)`
+
 ## Install
 
-1. Clone this repo and you are good to go!
+1. Clone this repo **including the submodules** and you are good to go!
+
+```
+$ git clone --recurse-submodules https://github.com/nalmeida/ssg5-test.git YOUR_FOLDER
+```
 
 ## Local development
+
+### 1. Basic Configuration
+
+Set the variables inside the `config.txt` file:
+
+* `SRC` (default `./src`): Your source files.
+* `DST` (default `./dist`): The distribution files output.
+* `SITE_NAME` (default `"SSG5 Test Website"`): Your website name. Always set it inside double quotes `"`.
+
+### 2. Generate
+
+In order to generate the project locally, run the `generate` command passing the local web server (`base_url`) as a paramenter. It is only used on the `sitemap.xml` generation. If empty, it will use `/` as default.
+
+```
+$ ./generate
+```
+
+### 3. Watch the ./src folder
 
 Run the `watch` command to generate the files from `./src` to `./dist` folder and start watching the `./src/*` folder.
 
 ```
 $ ./watch
+```
+
+### 4. Serve a local webserver
+
+There is a `./server` shell command to serve the files inside the `./dist` folder. It is a simple wrapper of the `python -m http.server` (tested using the `Python 3.7.3`).
+
+```
+$ ./server
 ```
 
 ## Deploy to Netlify
