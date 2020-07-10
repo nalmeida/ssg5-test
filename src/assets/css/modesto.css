@@ -1,5 +1,9 @@
 @import url("https://unpkg.com/modesto@latest/modesto.css");
 
+body {
+  background-image: url({base_url}assets/img/cool-background.png);
+}
+
 nav, footer {
   text-align: center;
   background-color: #ccc;
@@ -18,7 +22,7 @@ main {
   min-width: 100%;
   box-sizing: border-box;
   margin:0;
-  background-color: #efefef;
+  background-color: #fefede;
   padding: 1em;
 }
 h1 {
