@@ -32,7 +32,7 @@ Set the variables inside the `config.txt` file:
 In order to generate the project locally, run the `generate` command passing the local web server (`base_url`) as a paramenter. It is only used on the `sitemap.xml` generation. If empty, it will use `/` as default.
 
 ```
-$ ./generate
+$ ./generate http://0.0.0.0:8000/
 ```
 
 ### 3. Replace `base_url`
@@ -40,7 +40,7 @@ $ ./generate
 It is possible do "inject" the `base_url` into all the files inside the `./dist` folder recursively.  If empty, it will use `/` as default.
 
 ```
-$ ./replace_base_url
+$ ./replace_base_url http://0.0.0.0:8000/
 ```
 
 ### 4. Watch the ./src folder
