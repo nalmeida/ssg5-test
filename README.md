@@ -35,15 +35,23 @@ In order to generate the project locally, run the `generate` command passing the
 $ ./generate
 ```
 
-### 3. Watch the ./src folder
+### 3. Replace `base_url`
 
-Run the `watch` command to generate the files from `./src` to `./dist` folder and start watching the `./src/*` folder.
+It is possible do "inject" the `base_url` into all the files inside the `./dist` folder recursively.  If empty, it will use `/` as default.
+
+```
+$ ./replace_base_url
+```
+
+### 4. Watch the ./src folder
+
+Run the `watch` command to `generate` and `replace_base_url` the files from `./src` to `./dist` folder and start watching the `./src/*` folder.
 
 ```
 $ ./watch
 ```
 
-### 4. Serve a local webserver
+### 5. Serve a local webserver
 
 There is a `./server` shell command to serve the files inside the `./dist` folder. It is a simple wrapper of the `python -m http.server` (tested using the `Python 3.7.3`).
 
@@ -57,7 +65,7 @@ Of course you must have a Netlify account, connect it to your git repository and
 
 ### 1. Inside the **Continuous Deployment** of your project, config:
 
-* **Build command**: `./generate https://YOUR_FULL_URL.app`
+* **Build command**: `./generate https://YOUR_FULL_URL && ./replace_base_url https://YOUR_FULL_URL`
 * **Deploy directory**: `dist`
 
 ### 2. Another required configuration is:
