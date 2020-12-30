@@ -3,5 +3,6 @@ source config.txt
 URL=${1:-\/}
 ESCAPEDURL=$(echo "$URL" | sed 's/\//\\\//g')
 
-echo  Replacing {base_url} inside $DST folder.
+echo $(date +"%T") "- Replacing {base_url} inside $DST/* folder."
 find $DST -type f -name "*" -print0 | xargs -0 perl -pi -e 's/\{base_url\}/'$ESCAPEDURL'/g'
+echo "---"

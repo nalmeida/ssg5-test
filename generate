@@ -14,6 +14,6 @@ fi
 
 BASE_URL=${1:-\/}
 
-echo "Generating site"
-./ssg5/ssg5 $SRC $DST "$SITE_NAME" "$BASE_URL"
+echo $(date +"%T") "- Generating site"
+./ssg5/ssg5 $SRC $DST "$SITE_NAME" "$BASE_URL" | sed 's/^/  /'
 echo "---"
